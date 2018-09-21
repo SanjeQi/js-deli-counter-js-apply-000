@@ -1,11 +1,17 @@
-  function takeANumber(katzDeliLine, name) {
-    let placeInLine = katzDeliLine.length + 1;
-    katzDeliLine.push(name);
-     return `Welcome, ${name}. You are number ${placeInLine} in line.`;
+  let counter = 0
+  function takeANumber(katzDeliLine) {
+    
+    counter++
+    katzDeliLine.push(counter);
+     return `Welcome, you are number ${counter}.`;
   }
 
+let katz = []
   
-  
+console.log(takeANumber(katz))
+console.log(takeANumber(katz))
+console.log(takeANumber(katz))
+console.log(katz)
   
   
 function nowServing(katzDeliLine){
@@ -23,7 +29,7 @@ function nowServing(katzDeliLine){
       return "The line is currently empty.";
     } else {
   let numberName = line.map((name, index) => `${index+1}. ${name}`);
-      return `The line is currently: ${numberName.join(", ")}`;        
+      return `The line is currently: ${numberName.join(", ")}`;  
     } 
 } 
 
